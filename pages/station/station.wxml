@@ -1,0 +1,32 @@
+<!--pages/station/station.wxml-->
+<view class="container" style="background:url('https://gasapi.znlyq.cn/wximgs/bg.png') no-repeat center/contain;background-size:100% 100%">
+    <view wx:for="{{stationList}}" wx:key="{{item.recid}}" class="station" bindtap='buyOil' style="flex-direction:row;">
+      <view class="flex-item">
+        <text class="station_name">{{item.stationame}}</text>
+        <text class="station_address green">{{item.address}}</text>
+      </view>
+      <view class="flex-item station_nav" data-num="{{item.recid}}" catchtap='toNavigate'>
+        <view>
+          <text class="iconfont icon-daohang yellow" style="font-size:50rpx;margin-right:20rpx;margin-top:-6rpx;"></text>
+          <text class="yellow">导航</text>
+        </view>
+        <view class="arrow"></view>
+      </view>
+    </view>
+    <view class="product">
+        <block wx:if="{{answerResult.maxsucc >= 6}}">
+            <view class="product_head">
+                <image src='../images/product_head.png' mode="widthFix" class="product_headLogo"></image>
+                <text class="product_headDesc">{{headDesc}}</text>
+                <text class="product_headText">{{headText}}</text>
+            </view>
+            <view class="product_main" wx:for="{{waresList}}" wx:key="{{item.recid}}">
+                <view class="product_part" data-recid='{{item.recid}}' bindtap='payProduct'>
+                    <image src='{{item.imgurl}}' mode="aspectFit"></image>
+                    <view>原价：{{item.price}}元</view>
+                    <view>会员：{{item.amount}}元</view>
+                </view>
+            </view>
+        </block>
+    </view>
+</view>

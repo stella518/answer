@@ -1,0 +1,46 @@
+<!--pages/grade/grade.wxml-->
+<!--pages/user/user.wxml-->
+<view class="container" style="background:url('https://gasapi.znlyq.cn/wximgs/bg.png') no-repeat center/contain;background-size:100% 100%">
+    <view class='question'>
+        <view class='question_title'>
+            <text>答题成绩</text>
+        </view>
+        <ul class="total">
+            <li>
+                <text>总答题</text>
+                <text class='right'>{{answerResult.cnt}}</text>
+            </li>
+            <li>
+                <text>总对数</text>
+                <text class='right green'>{{answerResult.succ}}</text>
+            </li>
+            <li wx:if="{{promoObj.recid}}">
+                <text>福利加油</text>
+                <text class='right red f30'>{{promoObj.promodesc}}</text>
+            </li>
+            <li wx:if="{{promoObj.recid}}">
+                <text>活动时间</text>
+                <text class='right red f30'>{{promoObj.sdate}}~{{promoObj.edate}}</text>
+            </li>
+        </ul>
+        <text class="remain">本月还可用答题次数:{{answerResult.remainround}}</text>
+        
+    </view>
+    <view wx:if="{{answerResult.succ>=6}}" class="passNote">
+      <text class="red">恭喜！您已经通过测试,请注册成为安全志愿者。</text>
+    </view>
+    <view wx:if="{{answerResult.succ<6}}" class="passNote">
+      <text class="red">很抱歉！您未通过测试，请再次答题。</text>
+    </view>
+    <block wx:if="{{answerResult.remainround>0}}">
+         <button class="btn again" bindtap='answerAgain'>再来一局</button>
+    </block>
+    <block wx:elif="{{answerResult.round<3}}">
+  		<button class="btn invite" open-type="share">邀请好友</button>
+    </block>
+    <block wx:if="{{answerResult.maxsucc>=6}}">
+  		<button class="btn invite" bindtap='UserRegister'>注册志愿者</button>
+    </block>
+
+    <button class="btn back" bindtap='turnInde'>返回首页</button>
+</view>

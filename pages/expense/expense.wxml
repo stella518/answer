@@ -1,0 +1,15 @@
+<!--pages/expense/expense.wxml-->
+<view class="container" style="background:url('https://gasapi.znlyq.cn/wximgs/bg.png') no-repeat center/contain;background-size:100% 100%">
+    <view class="expense_base">
+      <view class="expense_status"><text class="iconfont icon-wodedingdan" style="font-size:34rpx;margin-right:20rpx;"></text>交易成功</view>
+      <view>加油站：东风南路中石油站</view>
+      <view class="expense_date">2018-04-10 16：30</view>
+    </view>
+    <view class="expense_info">
+      <view class="item"><text>油号</text> <text class="right">#92</text></view>
+      <view class="item"><text>油量</text> <text class="right">20L</text></view>
+      <view class="item"><text>金额</text> <text class="right red">￥200</text></view>
+      <view class="item"><text>优惠</text> <text class="right">￥20元/L</text></view>
+    </view>
+    <button class='back' bindtap='toIndex'>返回首页</button>
+</view>

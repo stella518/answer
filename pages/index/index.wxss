@@ -1,0 +1,98 @@
+/**index.wxss**/
+.user{
+  width:90%;
+  height: auto;
+  background: -webkit-linear-gradient(left, #FFA300 , #FBD701); /* Safari 5.1 - 6.0 */
+  background: -o-linear-gradient(right, #FFA300, #FBD701); /* Opera 11.1 - 12.0 */
+  background: -moz-linear-gradient(right, #FFA300, #FBD701); /* Firefox 3.6 - 15 */
+  background: linear-gradient(to right, #FFA300 , #FBD701); /* 标准的语法 */
+  border-radius: 30rpx;
+  padding: 20rpx 15rpx;
+  margin-top:50rpx;
+  box-sizing:border-box;
+  display:flex;
+}
+.userinfo-avatar{
+  border:3px solid #fff;
+  border-radius: 50%;
+}
+.user_head{
+  flex-grow: 2;
+}
+.user_head image{
+  width:140rpx;
+  height:140rpx;
+  margin:20rpx 0 20rpx 20rpx;
+}
+.user_info{
+  margin-left:50rpx;
+  padding:10rpx;
+  flex-grow: 2;
+  height: 160rpx;
+}
+.user_info text{
+  display: block;
+  height:60rpx;
+  line-height: 60rpx;
+}
+.user_info .user_name{
+  font-size: 36rpx;
+  font-weight: 700;
+}
+.user_info .user_ID{
+  margin-top: 3px;
+  font-size: 14px;
+}
+.user_info .user_times{
+  font-size: 14px;
+  color:#fff;
+  font-weight: 700;
+  margin-top:8px;
+}
+.begin{
+  width:350rpx;
+  height:350rpx;
+  margin-top:80rpx;
+  padding-top:90rpx;
+}
+.invite{
+  width:100%;
+  margin-top:50rpx;
+
+}
+.bottom{
+  margin-top:40rpx;
+}
+.btn{
+  width:40%;
+  color: #FFD000;
+  border:2px solid #FFD000;
+  background-color:transparent;
+  border-radius: 20px;
+  margin:0 40rpx;
+  padding: 5px;
+  box-sizing: border-box;
+  display: inline-block;
+  margin-left:30rpx;
+}
+.change_btn{
+  color:#fff;
+  padding: 16rpx;
+  border:0;
+  background: -webkit-linear-gradient(left, #FD2A4D , #FF4C81); /* Safari 5.1 - 6.0 */
+  background: -o-linear-gradient(right, #FD2A4D, #FF4C81); /* Opera 11.1 - 12.0 */
+  background: -moz-linear-gradient(right, #FD2A4D, #FF4C81); /* Firefox 3.6 - 15 */
+  background: linear-gradient(to right, #FD2A4D , #FF4C81); /* 标准的语法 */
+}
+.change_btn2{
+  color:#fff;
+  padding: 16rpx;
+  border:0;
+  background: -webkit-linear-gradient(left, #15AEA3 , #21E677); /* Safari 5.1 - 6.0 */
+  background: -o-linear-gradient(right, #15AEA3, #21E677); /* Opera 11.1 - 12.0 */
+  background: -moz-linear-gradient(right, #15AEA3, #21E677); /* Firefox 3.6 - 15 */
+  background: linear-gradient(to right, #15AEA3 , #21E677); /* 标准的语法 */
+}
+ .marginminus{
+  margin-bottom:20rpx;
+} 

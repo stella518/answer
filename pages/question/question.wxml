@@ -1,0 +1,26 @@
+<!--pages/user/user.wxml-->
+<view class="container" style="background:url('https://gasapi.znlyq.cn/wximgs/bg.png') no-repeat center/contain;background-size:100% 100%">
+    <view class='timer_container'>
+        <view class='timer'>
+            <image src='../images/flag.png' class='timer'></image>
+            <text class="time_count">第 {{questions.round}} 轮</text> </view>
+        <view class='counter'>答对：{{questions.succ}}</view>
+    </view>
+    <view class='question'>
+        <view class='question_title'>
+            <text class='question_cur'>第{{questions.idx + 1}}题</text>
+            <text class='question_all'>/共{{questions.allcnt}}题</text>
+            <view class='question_detail'>{{questions.question}}</view>
+        </view>
+        <button data-num='1' class="question_answer {{answer1}}" disabled="{{ifDisabled}}" bindtap="chooseOption" wx:if="{{questions.answer1}}">{{questions.answer1}}</button>
+        <button data-num='2' class="question_answer {{answer2}}" disabled="{{ifDisabled}}" bindtap="chooseOption" wx:if="{{questions.answer2}}">{{questions.answer2}}</button>
+        <button data-num='3' class="question_answer {{answer3}}" disabled="{{ifDisabled}}" bindtap="chooseOption" wx:if="{{questions.answer3}}">{{questions.answer3}}</button>
+        <button data-num='4' class="question_answer {{answer4}}" disabled="{{ifDisabled}}" bindtap="chooseOption" wx:if="{{questions.answer4}}">{{questions.answer4}}</button>
+    </view>
+    <view>
+		<block wx:if="{{ifDisabled}}">
+			<button class="quitBtn" bindtap='returnIndex'>放弃答题</button>
+      <button class="shareBtn" open-type="share">立即分享</button>
+		</block>
+   </view>
+</view>

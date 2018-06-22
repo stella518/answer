@@ -1,0 +1,13 @@
+<!--pages/rule/rule.wxml-->
+<view class="container" style="background:url('https://gasapi.znlyq.cn/wximgs/bg.png') no-repeat center/contain;background-size:100% 100%">
+  <view class="rule_box">
+    <text class="title">安全志愿者</text>
+    <text class="title">答题赢补贴活动规则</text>
+    <text class="explain">一、客户首次登录小程序后，将进行安全知识测验问答，每次测验为10道安全相关知识问题，在答对或超过6道题后，可进行注册，平台审核注册信息后，即成为“安全志愿者“<text class="yellow">（该身份有效期为一年）</text></text>
+    <text class="explain">二、成为安全志愿者后，每月有三轮答题机会（包含资格审核一轮），取当月最好成绩作为加油补贴的标准，即答对6道享受每升补贴0.6元，答对7道每升补贴0.7元，……全部答对10道题即享受每升补贴1元。
+<text class="yellow">该补贴标准当月有效，下月清空，重新开始答题获取补贴标准。</text></text>
+    <text class="explain">三、每月福利加油的优惠值取决用会员的答题成绩，单轮正确答题六道以上的会员才可获得加油优惠每轮答题为10道，如在答题过程中回答错误，即结束本轮。但拥有2次复活机会：将安全志愿者福利社小程序转发任意群1次，即可获得1次复活，越过错误题继续答题。越过之题不重新回答，判定为错误，计入本轮最终成绩。<text class="yellow">（如本轮使用2次复活机会，其余全部题回答正确，最终成绩为答对8道。）</text></text>
+  </view>
+  <!-- <text class="statement">最终解释权归XXX公司所有</text> -->
+</view>
+

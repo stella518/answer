@@ -1,0 +1,43 @@
+<!--pages/person/person.wxml-->
+<view class="container" style="background:url('https://gasapi.znlyq.cn/wximgs/bg.png') no-repeat center/contain;background-size:100% 100%">
+    <form bindsubmit="formSubmit">
+        <view class="section">
+            <view class="section__title">姓名</view>
+            <input name="realname" placeholder="输入姓名" placeholder-style="text-align:right;" value="{{personInfo?personInfo.realname:''}}" />
+        </view>
+        <view class="section section_gap">
+            <view class="section__title">性别</view>
+            <radio-group class="radio-group" bindchange="radioChange" name="gender">
+                <label class="radio" wx:for="{{items}}" wx:key="{{items.name}}">
+                    <radio value="{{item.name}}" checked="{{personInfo.gender == item.name}}" />{{item.value}}
+                </label>
+            </radio-group>
+        </view>
+        <view class="section">
+            <view class="section__title">身份证号</view>
+            <input name="idcard" type="idcard" placeholder="输入身份证号" placeholder-style="text-align:right;" value="{{personInfo?personInfo.idcard:''}}" />
+        </view>
+        <view class="section">
+            <view class="section__title">手机号</view>
+            <input name="mobile" placeholder="输入手机号" placeholder-style="text-align:right;" value="{{personInfo?personInfo.mobile:''}}" />
+        </view>
+        <view class="section">
+            <view class="section__title">工作单位</view>
+            <input name="workorg" placeholder="输入工作单位" placeholder-style="text-align:right;" value="{{personInfo?personInfo.workorg:''}}" />
+        </view>
+        <view class="section">
+            <view class="section__title">电子邮件</view>
+            <input name="email" placeholder="输入电子邮件" placeholder-style="text-align:right;" value="{{personInfo?personInfo.email:''}}" />
+        </view>
+        <view class="section">
+            <view class="section__title">上传个人照片</view>
+            <!-- <image class="upload-img" src="{{defaultImg}}" background-size="cover" bindtap='uploadImg'></image> -->
+             <image class="upload-img" src="{{defaultImg}}" bindload="imageLoad" style="width:{{ images.width }}rpx; height:{{ images.height }}rpx;"  background-size="cover" bindtap='uploadImg'></image> 
+        </view>
+        <view class="btn-area">
+ 			      <button bindtap='returnMain' class='quit'>返回上层页面</button>
+            <button formType="submit" class="subInfo" hidden="{{status>=4}}">提交个人信息</button>
+            <!-- <button data-type='car' formType="submit" class='next'>下一步完善车辆信息</button> -->
+        </view>
+    </form>
+</view>

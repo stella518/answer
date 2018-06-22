@@ -1,0 +1,18 @@
+<!--pages/user/user.wxml-->
+<view class="container" style="background:url('https://gasapi.znlyq.cn/wximgs/bg.png') no-repeat center/contain;background-size:100% 100%">
+    <view class="user_head">
+      <block wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo">
+        <image bindtap="bindViewTap" class="userinfo-avatar" src="../images/headshot.png" background-size="cover"></image>
+      </block>
+      <block wx:else>
+        <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+      </block>
+    </view>
+    <text class='user_name'>{{userInfo.nickName}}</text>
+    <ul class="user_list">
+      <navigator open-type='redirect' url="../person/person"><li>个人信息<text class='red'  wx:if="{{status <= 1}}">未完善</text><view class="arrow"></view></li></navigator>
+      <navigator open-type='redirect' url="../car/car"><li>车辆信息<text class='red'  wx:if="{{status <= 2}}">未完善</text><view class="arrow"></view></li></navigator>
+      <navigator open-type='navigate' url="../expenselist/expenselist"><li>消费信息<view class="arrow"></view></li></navigator>
+    </ul>
+    <button bindtap='returnMain' class='quit'>返回首页</button>
+</view>

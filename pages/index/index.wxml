@@ -1,0 +1,38 @@
+<!--index.wxml-->
+<view class="container" style="background:url('https://gasapi.znlyq.cn/wximgs/bg.png') no-repeat center/cover;">
+    <view class='user' bindtap='turnUser'>
+        <view class="user_head">
+            <block wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo">
+                <image class="userinfo-avatar" src="../images/headshot.png" background-size="cover"></image>
+            </block>
+            <block wx:else>
+                <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+            </block>
+        </view>
+        <view class='user_info'>
+            <text class='user_name'>{{userInfo.nickName}}</text>
+            <text class='user_times'>{{hint}}</text>
+        </view>
+    </view>
+    <block wx:if="{{status>=3}}">
+        <image src='../images/refuel.png' class='begin' bindtap="toRefuel"></image>
+    </block>
+    <block wx:else>
+        <image src='../images/begin.png' class='begin' bindtap="turnQuestion"></image>
+    </block>
+    <view class="invite">
+        <block wx:if="{{status>=3}}">
+            <button class="btn change_btn" bindtap="turnQuestion">继续答题</button>
+        </block>
+        <block wx:else>
+            <button class="btn change_btn" bindtap="toRefuel">畅享补贴</button>
+        </block>
+        <button class="btn change_btn2" open-type="share">邀请好友</button>
+    </view>
+    <view class="invite marginminus">
+        <button class="btn" open-type="contact" session-from="weapp">
+            联系客服
+        </button>
+        <button class="btn bottom" bindtap='turnRule'>活动规则</button>
+    </view>
+</view>

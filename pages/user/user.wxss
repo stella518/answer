@@ -1,0 +1,92 @@
+.user_head{
+  width:100px;
+  height: 100px;
+  border-radius: 50%;
+  overflow:hidden;
+  margin-top:50rpx;
+}
+.user_head image{
+  height: 100px;
+  width: 100px;
+  margin: 0 auto;
+}
+.user_name{
+  font-size: 20px;
+  font-weight: 700;
+  color: #fff;
+  margin-top:30rpx;
+}
+.user_ID{
+  font-size: 16px;
+  color: #fff;
+}
+.user_list{
+  padding: 5px 0;
+  width:90%;
+  border-radius: 15px;
+  background-color: #fff;
+  margin-top:60rpx;
+}
+
+.user_list li{
+  margin:5px auto;
+  width:80%;
+  height: 40px;
+  line-height: 40px;
+  display: block;
+  border-bottom: 1px solid #ccc;
+  position: relative;
+}
+.user_list navigator{
+  margin:5px auto;
+  width:80%;
+  height: 40px;
+  line-height: 40px;
+  display: block;
+  border-bottom: 1px solid #ccc;
+  position: relative;
+}
+.user_list navigator li{
+  width:100%;
+}
+.user_list navigator li text{
+  float:right;
+  margin-right:20px;
+  font-size:12px;
+  line-height:46px;
+
+}
+.user_list navigator:last-child{
+  border:0;
+}
+.user_list navigator:last-child li{
+  border:0;
+}
+.arrow{
+  width: 10px;
+  height: 10px;
+  border-top: 1px solid #aaa;
+  border-right: 1px solid #aaa;
+  position: absolute;
+  right: 5px;
+  transform: rotate(45deg);
+  top:20px;
+} 
+.userInfo{
+  width:90%;
+  height: 200px;
+  /* position: absolute;
+  top:170px; */
+}
+.quit{
+  width:90%;
+  height: 50px;
+  line-height: 50px;
+  background-color: #FF3C3F;
+  border-radius: 50px;
+  text-align: center;
+  color:#fff;
+  font-size: 18px;
+  margin-top:300rpx;
+  margin-bottom:180rpx;
+}

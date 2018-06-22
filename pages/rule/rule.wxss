@@ -1,0 +1,38 @@
+/* pages/rule/rule.wxss */
+.rule_box{
+  width:90%;
+  border-radius: 15px;
+  padding: 40rpx;
+  box-sizing: border-box;
+}
+.rule_box text{
+  color:#fff;
+  margin-bottom:30rpx;
+}
+.title{
+  text-align: center;
+  font-size: 40rpx;
+  font-weight: bold;
+  margin:10rpx 0;
+  display: block;
+}
+.explain{
+  font-size: 32rpx;
+  line-height: 40rpx;
+  text-align: left;
+  text-indent:50rpx;
+  display: block;
+}
+.statement{
+  color:#fff;
+  position: fixed;
+  bottom:20rpx;
+  left:50%;
+  transform: translateX(-50%);
+  text-align: center;
+  font-size: 28rpx;
+  font-weight: bold;
+}
+.explain .yellow{
+  color:#F49816;
+}

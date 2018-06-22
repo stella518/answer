@@ -1,0 +1,24 @@
+<!--pages/expenselist/expenselist.wxml-->
+<view class="container" style="background:url('https://gasapi.znlyq.cn/wximgs/bg.png') no-repeat center/contain;background-size:100% 100%">
+    <view wx:for="{{buyList}}" wx:key="{{item.litre}}" class="expense_item">
+      <view class='expense_base'>
+        <text class='expense_date'>{{item.paytime}}</text>
+        <text class='expense_status'>{{item.status}}</text>
+      </view>
+      <view class='expense_info'>
+        <view class='expense_name'>
+          #{{item.octane}}
+        </view>
+        <view class='expense_con'>
+          <text>{{item.litre}}升</text>
+          <text class="red">￥{{item.amount}}元</text>
+          <text>补贴：{{item.coupon}}元</text>
+        </view>
+      </view>
+      <view class='expense_location'>
+        <text class="iconfont icon-weizhi yellow" style="font-size:36rpx;margin-right:20rpx;"></text>
+        <text>{{item.stationid}}</text>
+      </view>
+    </view>
+</view>
+

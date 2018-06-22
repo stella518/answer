@@ -1,0 +1,36 @@
+<!--pages/refuel/refuel.wxml-->
+<view class="container" style="background:url('https://gasapi.znlyq.cn/wximgs/bg.png') no-repeat center/contain;background-size:100% 100%">
+  <form bindsubmit="formSubmit" class="product_form">
+    <image class="product_img" src='{{waresInfo.imgurl}}' mode="widthFix"></image>
+    <view class="product">
+      <view class="product_title">
+        <text>{{waresInfo.warename}}</text> <text class="product_price red">￥{{waresInfo.price}}</text> 
+      </view>
+    </view>
+    <view class="product_main">
+      <view class="product_introduce">
+        <view class="product_red red">商品介绍</view>
+        <view class='content'>
+          <text class="content_head">品牌</text><text class="content_main">{{waresInfo.brand}}</text>
+        </view>
+        <view class='content'>
+          <text class="content_head">商品详情</text><text class="content_main">{{waresInfo.description}}</text>
+        </view>
+      </view>
+    </view>
+    <view class="settle">
+      <view class='total'>
+        <view class='left value'>
+          <text>商品原价：{{waresInfo.price}} 元</text>
+          <text>优惠价格：{{waresInfo.amount}} 元</text>
+        </view>
+        <view class='right amount'>
+        <text class='red'>{{waresInfo.amount}} 元</text>
+        <text class='pay_icon'>实际支付</text>
+        </view>
+      </view>
+      <button class='pay' bindtap='toPay'>立即支付</button>
+    </view>
+  </form>
+</view>
+

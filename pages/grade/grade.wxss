@@ -1,0 +1,104 @@
+/* pages/grade/grade.wxss */
+.container{
+  justify-content: flex-start;
+}
+.question {
+    width: 90%;
+    border-radius: 15px;
+    background-color: #fff;
+    /* position: absolute;
+    top: 80px; */
+    text-align: center;
+    padding-bottom: 10rpx;
+    margin-top:80rpx;
+}
+
+.question .question_title {
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+    height: 50px;
+    line-height: 50px;
+    font-size: 16px;
+    color: #ff3c3f;
+    font-weight: 700;
+    border-bottom: 1px solid #ccc;
+}
+
+.total {
+    width: 100%;
+    height: 200px;
+}
+
+.total li {
+    text-align: left;
+    margin: 0 auto;
+    display: block;
+    width: 90%;
+    height: 50px;
+    line-height: 50px;
+}
+
+.right {
+    float: right;
+}
+
+.green {
+    color: #01c66f;
+}
+
+.red {
+    color: #ff3c3f;
+}
+
+.btn {
+    width: 70%;
+    height: 50px;
+    margin: 5px auto;
+    position: absolute;
+    border-radius: 50px;
+}
+
+.again {
+    bottom: 200rpx;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #ff3c3f;
+    color: #fff;
+}
+
+.back {
+    color: #ffd000;
+    border: 2px solid #ffd000;
+    background-color: transparent;
+    bottom: 40rpx;
+}
+
+.invite {
+    bottom: 200rpx;
+}
+
+.link {
+    width: 100%;
+    height: 50px;
+    text-align: center;
+}
+
+.f30 {
+    font-size: 28rpx;
+}
+
+.remain {
+    font-size: 30rpx;
+    margin: 10rpx auto;
+}
+.passNote{
+  width:90%;
+  margin:20rpx auto 10rpx;
+  text-align:center;
+  font-size:32rpx;
+  background-color:#fff;
+  border-radius:15px;
+  padding:40rpx 60rpx;
+  box-sizing:border-box;
+}

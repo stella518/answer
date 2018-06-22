@@ -1,0 +1,41 @@
+<!--pages/refuel/refuel.wxml-->
+<view class="container" style="background:url('https://gasapi.znlyq.cn/wximgs/bg.png') no-repeat center/contain;background-size:100% 100%">
+  <view class="station">
+    <view class="station_name">{{station.stationame}}</view>
+    <view class="station_address">{{station.address}}</view>
+  </view>
+  <form bindsubmit="formSubmit">
+    <view class="oil_title">
+      <text>选择油号</text>
+    </view> 
+    <view class="oils">
+      <button size="mini" class="oilBtn {{typeColor[0]}}" bindtap="bindPickerChange" data-type="92">92#</button> 
+      <button size="mini" class="oilBtn {{typeColor[1]}}" bindtap="bindPickerChange" data-type="95">95#</button> 
+    </view>
+    <view class="oil_title">今日油价</view>
+    <view class="yellow">{{oil_price}}元/升</view>
+    <view class="oil_title">加油金额</view>
+    <view class="price_logo">
+    <text class="price_tag">￥</text>
+    <input bindinput="computePrice" bindblur="computePrice" name="payment" type="payment" placeholder="请输入金额" placeholder-style="text-align:left;font-size:36rpx;" value="{{money}}" class="input_price"/></view>
+    <view class="oil_title">
+      <text class="oil_choose">快捷选择 </text>
+      <button size="mini" class="price_btn {{amtColor[0]}}" data-num="100" bindtap="chooseAmount">100</button> 
+      <button size="mini" class="price_btn {{amtColor[1]}}" data-num="200" bindtap="chooseAmount">200</button> 
+      <button size="mini" class="price_btn {{amtColor[2]}}" data-num="300" bindtap="chooseAmount">300</button>
+    </view>
+  </form>
+  <view class='total'>
+    <view class='left value'>
+      <text>加油油量：{{showObj.litre}}升</text>
+	  <text class='green'>每升优惠：{{showObj.discount}}元</text>
+      <text>加油补贴：{{showObj.coupon}}元</text>
+    </view>
+    <view class='right amount'>
+     <text class='red'>{{showObj.cash}}元</text>
+     <text class='pay_icon'>实际支付</text>
+    </view>
+  </view>
+  <button class='pay' bindtap='toPay'>立即支付</button>
+</view>
+

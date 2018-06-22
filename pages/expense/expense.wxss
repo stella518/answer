@@ -1,0 +1,45 @@
+/* pages/expense/expense.wxss */
+.container{
+  justify-content: flex-start;
+}
+.expense_base{
+  margin-top: 50rpx;
+  width:100%;
+  background-color:#636774;
+  color: #fff;
+  font-size: 30rpx;
+  padding: 30rpx 60rpx;
+  box-sizing:border-box;
+}
+.expense_base view{
+  margin-top: 10rpx;
+}
+.expense_status{
+  font-weight: 700;
+  font-size: 32rpx;
+}
+.expense_date{
+  font-size: 26rpx;
+}
+.expense_info{
+  margin-top: 50rpx;
+  width:100%;
+  background-color:#fff;
+  color: #333;
+  font-size: 30rpx;
+  box-sizing:border-box;
+}
+.expense_info view{
+  border-bottom:1px solid #ccc;
+  padding: 20rpx 60rpx;
+}
+.back{
+  position: absolute;
+  bottom:0;
+  width:100%;
+  background-color: #FF3C3F;
+  color:#fff;
+  border-radius: 0;
+  font-size: 36rpx;
+}
+

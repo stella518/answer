@@ -1,0 +1,82 @@
+/* pages/person/person.wxss */
+ form{
+  margin-top:80rpx;
+  padding: 5px 30rpx;
+  width:80%;
+  background-color: #fff;
+  border-radius: 15px;
+}  
+form .section{
+  display: inline-block;
+  margin:5px auto;
+  width:100%;
+  /* height: 40px; */
+  line-height: 40px;
+  border-bottom: 1px solid #ccc;
+  position: relative;
+}
+form .section{
+  font-size:32rpx;
+}
+form .section:nth-child(7){
+  border-bottom: 0;
+}
+form .section view{
+  display: inline-block;
+}
+form .section radio-group{
+  display: inline-block;
+  float: right;
+  margin-right: 10rpx;
+}
+form .section input{
+  display: inline-block;
+  width:260rpx;
+  padding:0;
+  margin:0;
+  position:absolute;
+  top:8px;
+  right:0; 
+  display: -webkit-box;
+  word-break: break-all;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 32rpx;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp:2;
+}
+form .btn-area{
+  width: 100%;
+  margin-top:120rpx;
+  position: absolute;
+  left:0;
+  text-align:center;
+}
+.btn-area button{
+  display: inline-block;
+  background-color: #F49816;
+  border-radius: 50px;
+  color:#fff;
+  font-size: 16px;
+  padding: 8rpx 24rpx;
+  position: relative;
+  
+}
+.btn-area .subInfo{
+ margin:0 auto;
+}
+.quit{
+  padding: 0 80rpx;
+  margin-right:9%;
+
+}
+.next{
+  float:right;
+}
+.upload-img{
+  width:130rpx;
+  height:100rpx;
+  float:right;
+  margin-right:20rpx;
+}

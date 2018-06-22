@@ -1,0 +1,37 @@
+<!--pages/car/car.wxml-->
+<view class="container" style="background:url('https://gasapi.znlyq.cn/wximgs/bg.png') no-repeat center/contain;background-size:100% 100%">
+    <form bindsubmit="formSubmit">
+        <view class="section">
+            <view class="section__title">车牌号码</view>
+            <view class="number_box">
+              <picker name="areaText" class="area_picker" bindchange="areaPickerChange" value="{{index}}" range="{{areaList}}" range-key="name">
+                <view class="picker">
+                  {{area}}
+                </view>
+              </picker>
+              <input name="platenumber" placeholder="输入车牌号码" placeholder-style="text-align:right;" value="{{carInfo?carInfo.platenumber_main:''}}" />
+            </view>
+        </view>
+        <view class="section">
+            <view class="section__title">品牌</view>
+            <input name="brand" placeholder="输入品牌" placeholder-style="text-align:right;" value="{{carInfo?carInfo.brand:''}}" />
+        </view>
+        <view class="section">
+            <view class="section__title">型号</view>
+            <input name="model" placeholder="输入型号" placeholder-style="text-align:right;" value="{{carInfo?carInfo.model:''}}" />
+        </view>
+        <view class="section">
+            <view class="section__title">上传行驶证</view>
+            <image bindload="imageLoad" style="width:{{ images.width }}rpx; height:{{ images.height }}rpx;" class="upload-img" src="{{defaultImg}}" background-size="cover" bindtap='uploadImg'></image>
+            <!-- <view class="imgContainer"> -->
+              
+              <!-- <image wx:else class="upload-img" src="{{defaultImg}}" background-size="cover" bindtap='uploadImg'></image> -->
+            <!-- </view> -->
+            
+        </view>
+        <view class="btn-area">
+            <button bindtap='returnMain' class='quit'>返回上层页面</button>
+            <button formType="submit" class="subInfo" hidden="{{status>=4}}">提交车辆信息</button>
+        </view>
+    </form>
+</view>
