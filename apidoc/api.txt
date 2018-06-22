@@ -1,0 +1,252 @@
+
+
+返回公共信息
+	{
+		code : 0,		-- 0-成功, 其他失败
+		info : '',		--错误信息
+	}
+
+1: 微信登录
+	命令: doLogin
+	参数:
+		{
+			code : "",
+			encryptedData : "",
+			iv : ""
+		}
+
+2: 保存客户信息
+	命令: user/saveinfo
+	参数:
+		{
+			nickname : "",		--昵称
+			invitecode : "",	--邀请码
+			realname : "",		--姓名
+			gender  : 0,		--性别 0-未知 1-男 2-女
+			idcard : "",		--身份证号码
+			mobile : "",		--手机号码
+			workorg : "",		--工作单位
+			email : "",			--电子邮件
+			fname : "",         --个人图片（保存图片返回的地址）
+		}
+
+3: 更新客户信息
+	命令: user/updateinfo
+	参数:
+		{
+			nickname : "",		--昵称
+			realname : "",		--姓名
+			gender  : 0,		--性别 0-未知 1-男 2-女
+			idcard : "",		--身份证号码
+			mobile : "",		--手机号码
+			workorg : "",		--工作单位
+			email : "",			--电子邮件
+			fname : "",         --个人图片（保存图片返回的地址）
+		}
+
+4: 获取客户信息
+	命令: user/getinfo
+	参数: 无
+	返回:
+		{
+			memberid :  --会员ID
+			realname : 	--真实名称
+			gender   :	--性别 0-未知 1-男 2-女
+			mobile   :	--手机号码
+			email    :	--电子邮件
+			address  :	--通讯地址
+			idcard   :  --身份证号码
+			workorg  :  --工作单位
+			imgurl   :  --图片地址 ($host/mbrimg/memberid/ imgurl)
+		}
+
+5: 更新客户车辆信息
+	命令: car/updateinfo
+	参数:
+		{
+			platenumber : "",		--车牌号码
+			brand       : "",		--品牌
+			model       : "",		--型号
+			prodate     : "",		--年份
+			mototype    : "",		--车型
+			fname       : "",       --图片（保存图片返回的地址）
+		}
+
+6: 获取客户车辆信息
+	命令: car/getinfo
+	参数: 无
+	返回:
+		{
+			memberid    : --会员ID
+			platenumber : --车牌号码
+			brand       : --品牌
+			model       : --型号
+			prodate     : --年份
+			mototype    : --车型
+			imgurl      :  --图片地址 ($host/mbrimg/memberid/ imgurl)
+		}
+
+7: 获取题目
+	命令: quest/getquest
+	参数: 无
+	返回:
+		{
+			recid       : 题目ID
+			question    : 题目内容
+			answer1     : 答案一
+			answer2     : 答案二
+			answer3     : 答案三
+			answer4     : 答案四
+			allcnt      : 本轮题目总数
+			idx         : 第几题
+			succ        : 正确数
+			fail        : 错误数
+			cnt         ：本轮总共答题次数
+			maxsucc     ：本月最好成绩
+			remain      ：本轮还剩答题次数
+			remainround ：本月还剩答题轮数
+			round       ：当前是第几轮
+			succnt      : 连续回答正确个数, =99999 答题错误，但是没有分享
+			shares      : 本轮分享次数
+		}
+
+8: 检查问题答案
+	命令: quest/anwser
+	参数:
+		{
+			questid : 题目ID
+			answer  : 答案 例如:'1', '13'
+		}
+	返回:
+		{
+			recid       : 题目ID
+			question    : 题目内容
+			answer1     : 答案一
+			answer2     : 答案二
+			answer3     : 答案三
+			answer4     : 答案四
+			allcnt      : 本轮题目总数
+			idx         : 第几题
+			succ        : 正确数
+			fail        : 错误数
+			cnt         ：本轮总共答题次数
+			maxsucc     ：本月最好成绩
+			remain      ：本轮还剩答题次数
+			remainround ：本月还剩答题轮数
+			round       ：当前是第几轮
+			succnt      : 连续回答正确个数, =99999 答题错误，但是没有分享
+			shares      : 本轮分享次数
+		}
+
+9: 获取本月回答问题结果
+	命令: quest/getresult
+	参数: 无
+	返回:
+		{
+			allcnt      : 本轮题目总数
+			idx         : 第几题
+			succ        : 正确数
+			fail        : 错误数
+			maxsucc     ：本月最好成绩
+			remain      ：本轮还剩答题次数
+			remainround ：本月还剩答题轮数
+			round       ：当前是第几轮
+			succnt      : 连续回答正确个数, =99999 答题错误，但是没有分享
+			shares      : 本轮分享次数
+		}
+
+10: 保存客户分享信息
+	命令: user/share
+	参数:
+		{
+			tickets : 微信返回凭据
+		}
+
+	返回: 公共返回
+
+11: 获取客户分享次数
+	命令: user/shareinfo
+	参数: 无
+	返回:
+		{
+			count : 分享次数
+		}
+
+12: 获取加油站列表
+	命令: gas/list
+	参数: 无
+	返回:
+		{
+			data : 数组
+		}
+
+		data:
+			stationame	--加油站名称
+			status		--状态 0-未启用 1-正常 2-暂停
+			address		--地址
+			lat			--纬度
+			lng			--经度
+
+
+13: 获取优惠信息列表
+	命令: promo/list
+	参数: 无
+	返回:
+		{
+			data : 数组
+		}
+
+		data:
+			promodesc	--促销活动描述
+			quests		--正确回答问题个数
+			price		--优惠金额(分)
+			sdate		--有效期-起始日期
+			edate		--有效期-结束日期
+
+14: 开始新一轮答题
+	命令: quest/start
+	参数: 无
+	返回: 公共参数
+
+
+15: 获取汽油价格
+	命令: gas/price
+	参数: 无
+	返回:
+		{
+			octane    : 汽油标号 92，95
+			price     : 价格（分）
+		}
+
+16: 计算优惠信息
+	命令: gas/computer
+	参数:
+		{
+			octane    : 汽油标号 92，95
+			amount    : 金额（分）
+		}
+	返回:
+		{
+			litre     : 升数
+			coupon    : 优惠金额
+			amount    : 应收
+			cash      : 实收
+			discount  : 每升优惠
+		}
+
+17: 获取客户状态
+	命令: user/getuser
+	参数: 无
+	返回:
+		{
+			memberid :  --会员ID
+			status : 	--状态
+		}
+
+18: 上传图片文件
+	命令: upload
+	参数: 无
+	返回:
+		{
+			fname  :  文件名称
+		}
